@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,18 +28,18 @@
 
   <main>
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
           aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="bd-placeholder-img" style="height: auto;" width="100%" height="100%" src="img/background.jpg">
           <div class="container">
-            <div class="">
+            <div class="carousel-caption">
               <h1>あなたはSDGsについて何か知っていますか？</h1>
               <p>Do you know about the SDGs?</p>
             </div>
@@ -49,7 +50,7 @@
 
 
           <div class="container">
-            <div class="carousel-caption text-start">
+            <div class="carousel-caption">
               <h1>誰一人取り残さない</h1>
               <p>leave no one behind</p>
             </div>
@@ -59,29 +60,36 @@
           <img class="bd-placeholder-img" style="height: auto;" width="100%" height="100%" src="img/background3.jpeg">
 
           <div class="container">
-            <div class="carousel-caption text-end">
+            <div class="carousel-caption">
               <h1>持続可能でより良い社会を</h1>
               <p>A sustainable and better society</p>
             </div>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
 
-    <div class="container marketing">
-      <section id="sdgs-img"></section>
-      <div class="desktop-onry">
-        <p style="text-align: center">↓クリックで指定のところに飛べます</p>
-        <img class="d-block mx-auto" src="./img/sdgs.jpg" usemap="#image-map" title="クリックしてみてね">
+    <div class="desktop-onry">
+      <div class="container item">
 
+        <section id="sdgs-img">
+          <p>↓クリックで指定のところに飛べます</p>
+
+          <!-- 画像配置 -->
+          <!-- usemapでボタン化 -->
+          <img class="d-block mx-auto" src="./img/sdgs.jpg" usemap="#image-map" title="クリックしてみてね">
+
+        </section>
+
+        <!-- ボタン位置指定 -->
         <map name="image-map">
           <area target="" alt="1" title="1" href="index.html#1" coords="45,186,186,327" shape="rect">
           <area target="" alt="2" title="2" href="index.html#2" coords="203,187,345,327" shape="rect">
@@ -101,15 +109,16 @@
           <area target="" alt="16" title="16" href="index.html#16" coords="520,504,662,645" shape="rect">
           <area target="" alt="17" title="17" href="index.html#17" coords="679,504,819,644" shape="rect">
         </map>
-      </div>
 
+      </div>
+    </div>
 
 
       <section id="1"></section>
       <hr class="featurette-divider">
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">貧困をなくそう<span class="text-muted">Let's End Poverty</span></h2>
+          <h2 class="featurette-heading">貧困をなくそう<br><span class="text-muted">Let's End Poverty</span></h2>
           <p class="lead">あらゆる場所のあらゆる貧困を終わらせる</p>
         </div>
         <div class="col-md-5">
@@ -294,10 +303,16 @@
           <h2 class="featurette-heading">陸の豊かさも守ろう<span class="text-muted">英語訳</span></h2>
           <p class="lead">てすと</p>
         </div>
+
+        <!-- 画像表示 -->
         <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" src="./img/icon15.svg">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+            width="500"
+            height="500" 
+            src="./img/icon15.svg"
+          >
         </div>
+
       </div>
 
       <section id="16"></section>
@@ -307,10 +322,16 @@
           <h2 class="featurette-heading">平和と公平をすべての人に<span class="text-muted">英語訳</span></h2>
           <p class="lead">てすと</p>
         </div>
+
+        <!-- 画像表示 -->
         <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" src="./img/icon16.svg">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+            width="500"
+            height="500" 
+            src="./img/icon16.svg"
+          >
         </div>
+
       </div>
 
       <section id="17"></section>
@@ -320,10 +341,15 @@
           <h2 class="featurette-heading">パートナーシップで目標を達成しよう<span class="text-muted">英語訳</span></h2>
           <p class="lead">てすと</p>
         </div>
+
+        <!-- 画像表示 -->
         <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" src="./img/icon17.svg">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+            width="500"
+            height="500" src="./img/icon17.svg"
+          >
         </div>
+
       </div>
     </div>
 
@@ -334,7 +360,6 @@
         TOP
         <img width="50" height="50" src="./img/chikyu.png"></a>
       <p>&copy; 2023 - Tampopo256</p>
-      <p style="display:none;">一つ目の隠しメッセージだよ。簡単すぎたかな</p>
     </footer>
   </main>
 
@@ -342,10 +367,6 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery.rwdImageMaps.js"></script>
-
-
-  <script src="js/cokkie-settings.js"></script>
-
 
   <script src="js/msg.js"></script>
 

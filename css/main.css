@@ -1,179 +1,222 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
 body {
+    /* remを使用することで相対的にサイズを指定 */
+
+    /* 上側の隙間指定 */
     padding-top: 3rem;
+
+    /* 下側の隙間指定 */
     padding-bottom: 3rem;
+
+    /* 標準文字色を #5a5a5a へ*/
     color: #5a5a5a;
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
-  -------------------------------------------------- */
-
-/* Carousel base class */
 .carousel {
+    /* 下側の隙間指定 */
     margin-bottom: 4rem;
 }
 
-/* Since positioning the image, we need to help out the caption */
 .carousel-caption {
+
+    /* 位置調整 */
     bottom: 3rem;
+
+    /* 重ね合わせレベルを上位へ */
     z-index: 10;
 }
 
-/* Declare heights because of positioning of img element */
 .carousel-item {
+
+    /* 要素の高さを指定 */
     height: 32rem;
 }
 
-.carousel-item>img {
+.carousel-item img {
+
+    /* 絶対指定する為のやつ */
     position: absolute;
+
+    /* 位置を相対指定 */
     top: 0;
     left: 0;
+
+    /* 最小サイズを指定 */
     min-width: 100%;
+
+    /* 要素の高さを指定 */
     height: 32rem;
 }
 
+.item h2 {
 
-/* MARKETING CONTENT
-  -------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.marketing h2 {
+    /* フォントのサイズを指定 */
     font-weight: 400;
 }
 
-/* rtl:begin:ignore */
-.marketing .col-lg-4 p {
+.item .col-lg-4 p {
+
+    /* 右側空白の間を指定 */
     margin-right: .75rem;
+
+    /* 左側空白の間を指定 */
     margin-left: .75rem;
 }
 
-/* rtl:end:ignore */
-
-
-/* Featurettes
-  ------------------------- */
-
 .featurette-divider {
+
+    /* 全四辺の間を間を指定 */
     margin: 5rem 0;
-    /* Space out the Bootstrap <hr> more */
 }
 
-/* Thin out the marketing headings */
+
 .featurette-heading {
+
+    /* フォントのサイズを指定 */
     font-weight: 300;
+
+    /* 行間を指定 */
     line-height: 1;
-    /* rtl:remove */
+
+    /* 文字間を指定 */
+    /* この場合は近づける */
     letter-spacing: -.05rem;
 }
 
+/* 上に戻るボタン */
+#page-top {
 
-/* RESPONSIVE CSS
-  -------------------------------------------------- */
+    /* 絶対指定する為のやつ */
+    position: fixed;
 
+    /* 位置を相対指定 */
+    right: 10px;
+    bottom: 20px;
+
+    /* 要素の高さを指定 */
+    height: 100px;
+
+    /* リンク特有の＿を削除 */
+    text-decoration: none;
+
+    /* 太文字にする */
+    font-weight: bold;
+
+    /* 縦書きにする為に、90度回転 */
+    transform: rotate(90deg);
+
+    /* フォント相対サイズ指定 */
+    font-size: 120%;
+
+    /* 行間を指定 */
+    line-height: 2.5rem;
+
+    /* 文字の色を指定 */
+    color: #8fe9ff;
+
+    /* 要素四辺に間を指定 */
+    padding: 0 0 0 35px;
+
+    /* 上側の境界を広げる */
+    border-top: solid 2px;
+}
+
+/* 矢印部分の線配置 */
+#page-top::before {
+
+    /* 文字を無に置き換える */
+    content: "";
+
+    /* クリック判定見える領域に広げる */
+    display: block;
+
+    /* 絶対指定する為のやつ */
+    position: absolute;
+
+    /* 位置を相対指定 */
+    top: -1px;
+    left: 0px;
+
+    /* 横幅を指定 */
+    width: 15px;
+
+    /* 上側の境界を広げる */
+    border-top: solid 2px;
+
+    /* 角度を35度回転する */
+    transform: rotate(35deg);
+
+    /* 回転の原点を左上にする */
+    transform-origin: light top;
+}
+
+.bd-placeholder-img {
+
+    /* フォント相対サイズ指定 */
+    font-size: 1.125rem;
+
+    /* 左右中央揃え */
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    /* 選択できないようにする */
+    user-select: none;
+}
+
+/* 画面サイズに応じて文字を小さくする */
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+
+        /* フォント相対サイズ指定 */
+        font-size: 3.5rem;
+    }
+}
+
+/* 画面サイズに応じて調整 */
 @media (min-width: 40em) {
-
-    /* Bump up size of carousel content */
     .carousel-caption p {
+
+        /* 下側の隙間指定 */
         margin-bottom: 1.25rem;
+
+        /* フォント相対サイズ指定 */
         font-size: 1.25rem;
+
+        /* 行間を指定 */
         line-height: 1.4;
     }
 
     .featurette-heading {
+
+        /* フォントサイズ指定 */
         font-size: 50px;
     }
 }
 
+/* 画面サイズに応じて調整 */
 @media (min-width: 62em) {
     .featurette-heading {
+
+        /* 上側の間を指定 */
         margin-top: 7rem;
     }
 }
 
 
-#page-top {
-    position: fixed;
-    right: 10px;
-    bottom: 20px;
-    height: 100px;
-    text-decoration: none;
-    font-weight: bold;
-    transform: rotate(90deg);
-    font-size: 120%;
-    line-height: 2.5rem;
-    color: #8fe9ff;
-    padding: 0 0 0 35px;
-    border-top: solid 2px;
-
-
-}
-
-#page-top::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: 0px;
-    width: 15px;
-    border-top: solid 2px;
-    transform: rotate(35deg);
-    transform-origin: light top;
-}
-
-.description_top {
-    width: 150px;
-    position: absolute;
-    left: 50%;
-    bottom: 80%;
-    transform: translateX(-50%);
-    margin-bottom: 8px;
-    padding: 8px;
-    border-radius: 10px;
-    background-color: #666;
-    font-size: 0.7em;
-    color: #fff;
-    text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1;
-    transition: 0.5s all;
-}
-
-.tooltip:hover .description_top {
-    bottom: 100%;
-    visibility: visible;
-    opacity: 1;
-}
-
+/* 幅が広いディスプレイの時はSDGsの横幅画像を表示しない */
+/* サイズ変更でボタン配置がずれるため、サイズ変更は不可 */
 @media screen and (max-width: 1030px) {
     .desktop-onry {
+
+        /* 表示を無くす */
         display: none;
     }
 }
 
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-
+/* 補足説明メッセージ */
 .desktop-onry p {
+
+    /* 中央寄せ */
     text-align: center;
 }
