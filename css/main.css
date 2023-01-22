@@ -220,3 +220,12 @@ body {
     /* 中央寄せ */
     text-align: center;
 }
+
+footer a {
+    
+    /* 下線を消す */
+    text-decoration: none;
+
+    /* 色を標準に指定 */
+    color: #5a5a5a;
+}
