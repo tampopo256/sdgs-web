@@ -1,3 +1,7 @@
+* {
+    outline: 2px red solid;
+}
+
 body {
     /* remを使用することで相対的にサイズを指定 */
 
@@ -9,6 +13,14 @@ body {
 
     /* 標準文字色を #5a5a5a へ*/
     color: #5a5a5a;
+
+    /* 横スクロールを消す */
+    overflow-x: hidden;
+}
+
+
+.warp {
+    overflow: hidden;
 }
 
 
@@ -26,13 +38,30 @@ body {
     z-index: 10;
 }
 
+.carousel-caption p {
+    /* フォントの種類指定 */
+    font-family: 'Homemade Apple';
+}
+
+.carousel-caption h1 {
+    /* フォントの種類指定 */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
 .carousel-item {
 
     /* 要素の高さを指定 */
     height: 32rem;
+
+    /* 背景を黒にするなりー */
+    background-color: rgb(0, 0, 0, 1)
 }
 
 .carousel-item img {
+
+    /* 少しだけ透明にしちゃうぞ(キラ) */
+    opacity: 0.8;
 
     /* 絶対指定する為のやつ */
     position: absolute;
@@ -48,10 +77,30 @@ body {
     height: 32rem;
 }
 
+
+.a-items span {
+
+    /* でかくする */
+    font-size: 3rem;
+
+    /* フォントの種類指定 */
+    font-family: 'Homemade Apple';
+
+    /* 若干右に寄せる */
+    margin-left: 10px;
+
+    /* 少し透明に */
+    opacity: 0.6;
+}
+
+
 .item h2 {
 
     /* フォントのサイズを指定 */
-    font-weight: 400;
+    font-weight: 400px;
+
+    /* フォントの種類指定 */
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .item .col-lg-4 p {
@@ -61,6 +110,9 @@ body {
 
     /* 左側空白の間を指定 */
     margin-left: .75rem;
+
+    /* 少しだけサイズを大きく */
+    font-size: 120%;
 }
 
 .featurette-divider {
@@ -222,10 +274,23 @@ body {
 }
 
 footer a {
-    
+
     /* 下線を消す */
     text-decoration: none;
 
     /* 色を標準に指定 */
     color: #5a5a5a;
+}
+
+footer .circle {
+
+    /* 円を描画する */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: gray;
+
+
+
+    opacity: 0.9;
 }
