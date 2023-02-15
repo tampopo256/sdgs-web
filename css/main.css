@@ -21,6 +21,8 @@ body {
 
 
 .warp {
+
+    /* 横にはみ出た文章を削除 */
     overflow: hidden;
 }
 
@@ -42,11 +44,17 @@ body {
 .carousel-caption p {
     /* フォントの種類指定 */
     font-family: 'Homemade Apple';
+
+    /* 影をつけて、立体的に */
+    text-shadow: 5px 5px 3px rgba(0,0,0,0.5);
 }
 
 .carousel-caption h1 {
     /* フォントの種類指定 */
     font-family: 'Noto Sans JP', sans-serif;
+
+    /* 影をつけて、立体的に */
+    text-shadow: 5px 5px 3px rgba(0,0,0,0.7);
 }
 
 
@@ -78,11 +86,15 @@ body {
     height: 32rem;
 }
 
+.a-items img {
+    /* 重ね合わせレベルを上位へ */
+    z-index: 10;
+}
 
 .a-items span {
 
     /* でかくする */
-    font-size: 3rem;
+    font-size: 2rem;
 
     /* フォントの種類指定 */
     font-family: 'Homemade Apple';
@@ -257,7 +269,7 @@ body {
 }
 
 
-/* 幅が広いディスプレイの時はSDGsの横幅画像を表示しない */
+/* 幅が狭いディスプレイの時はSDGsの横幅画像を表示しない */
 /* サイズ変更でボタン配置がずれるため、サイズ変更は不可 */
 @media screen and (max-width: 1030px) {
     .desktop-onry {
@@ -265,6 +277,14 @@ body {
         /* 表示を無くす */
         display: none;
     }
+}
+
+@media screen and (min-width: 481px) {
+    .mobile-onry {
+
+        /* 表示を無くす */
+        display: none;
+    }    
 }
 
 /* 補足説明メッセージ */
@@ -286,12 +306,12 @@ footer a {
 footer .circle {
 
     /* 円を描画する */
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: gray;
+    background: rgb(188, 188, 188);
 
 
-
-    opacity: 0.9;
+    /* 少しだけ透明にする */
+    opacity: 0.95;
 }
